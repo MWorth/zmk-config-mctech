@@ -97,7 +97,7 @@ layers:
   - UP ARROW
   - DELETE
   - PAGE UP
-  - '&lock'
+  - Lock
   - $$mdi:backspace-outline$$
   - CAPSLOCK
   - BT NXT
@@ -109,7 +109,7 @@ layers:
   - ↓
   - RIGHT ARROW
   - PAGE DOWN
-  - '&run'
+  - Sft+Alt+E
   - ↹
   - LEFT GUI
   - BT CLR
@@ -148,9 +148,9 @@ layers:
   - {t: '$$mdi:led-outline$$', s: '$$mdi:eyedropper$$', type: sym_by_sym}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PREV
-  - PLAY PAUSE
-  - NEXT
+  - ⏮️
+  - PLAY
+  - ⏭️
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

@@ -28,25 +28,6 @@
             label = "PW";
         };
 
-        lock: lock {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LEFT_GUI &kp L>, <&macro_release>;
-
-            label = "LOCK";
-        };
-
-        run: run {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT &kp LEFT_ALT &kp E>,
-                <&macro_release>;
-
-            label = "RUN";
-        };
-
         login: login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -102,19 +83,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB       &bt BT_PRV  &kp F4   &kp F3           &kp F2   &kp F1       &kp INSERT       &kp UP_ARROW    &kp DELETE       &kp PAGE_UP    &lock   &kp BSPC
-&kp CAPSLOCK  &bt BT_NXT  &kp F8   &kp F7           &kp F6   &kp F5       &kp LEFT_ARROW   &kp DOWN        &kp RIGHT_ARROW  &kp PAGE_DOWN  &run    &kp TAB
-&kp LEFT_GUI  &bt BT_CLR  &kp F12  &kp F11          &kp F10  &kp F9       &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE      &trans         &login  &kp ESCAPE
+&kp TAB       &bt BT_PRV  &kp F4   &kp F3           &kp F2   &kp F1       &kp INSERT       &kp UP_ARROW    &kp DELETE       &kp PAGE_UP    &kp LG(L)      &kp BSPC
+&kp CAPSLOCK  &bt BT_NXT  &kp F8   &kp F7           &kp F6   &kp F5       &kp LEFT_ARROW   &kp DOWN        &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp LS(LA(E))  &kp TAB
+&kp LEFT_GUI  &bt BT_CLR  &kp F12  &kp F11          &kp F10  &kp F9       &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE      &trans         &login         &kp ESCAPE
                                    &kp RIGHT_SHIFT  &trans   &kp SPACE    &kp RET          &trans          &kp RCTRL
             >;
         };
 
         both_layer {
             bindings = <
-&rgb_ug RGB_TOG  &trans           &trans           &trans           &trans           &trans             &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &trans  &trans  &trans
-&rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &trans           &trans             &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &trans  &trans  &trans
-&rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI    &trans        &kp K_STOP        &trans        &trans  &trans  &trans
-                                                   &trans           &trans           &trans             &trans        &trans            &trans
+&rgb_ug RGB_TOG  &trans           &trans           &trans           &trans           &trans             &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &trans  &trans
+&rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &trans           &trans             &kp C_PREV    &kp C_PLAY  &kp C_NEXT    &trans  &trans  &trans
+&rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI    &trans        &kp C_STOP  &trans        &trans  &trans  &trans
+                                                   &trans           &trans           &trans             &trans        &trans      &trans
             >;
 
             label = "ALT";
