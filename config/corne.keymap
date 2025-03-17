@@ -43,6 +43,13 @@
 
             label = "RUN";
         };
+
+        login: login {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp A &kp T &kp T &kp H &kp E &kp W &kp DOT &kp W &kp O &kp R &kp T &kp H &kp TAB &kp LS(A) &kp LS(Z) &kp A &kp Z &kp N0 &kp N9 &kp EXCL &kp EXCL &kp ENTER>;
+            label = "LOGIN";
+        };
     };
 
     keymap {
@@ -92,9 +99,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB       &bt BT_PRV  &kp F4   &kp F3           &kp F2   &kp F1       &kp INSERT       &kp UP_ARROW    &kp DELETE       &kp PAGE_UP    &lock  &kp BSPC
-&kp CAPSLOCK  &bt BT_NXT  &kp F8   &kp F7           &kp F6   &kp F5       &kp LEFT_ARROW   &kp DOWN        &kp RIGHT_ARROW  &kp PAGE_DOWN  &run   &kp TAB
-&kp LEFT_GUI  &bt BT_CLR  &kp F12  &kp F11          &kp F10  &kp F9       &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE      &user          &pw    &kp ESCAPE
+&kp TAB       &bt BT_PRV  &kp F4   &kp F3           &kp F2   &kp F1       &kp INSERT       &kp UP_ARROW    &kp DELETE       &kp PAGE_UP    &lock   &kp BSPC
+&kp CAPSLOCK  &bt BT_NXT  &kp F8   &kp F7           &kp F6   &kp F5       &kp LEFT_ARROW   &kp DOWN        &kp RIGHT_ARROW  &kp PAGE_DOWN  &run    &kp TAB
+&kp LEFT_GUI  &bt BT_CLR  &kp F12  &kp F11          &kp F10  &kp F9       &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE      &trans         &login  &kp ESCAPE
                                    &kp RIGHT_SHIFT  &trans   &kp SPACE    &kp RET          &trans          &kp RCTRL
             >;
         };

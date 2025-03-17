@@ -120,8 +120,8 @@ layers:
   - PRINTSCREEN
   - SCROLLLOCK
   - PAUSE
-  - '&user'
-  - '&pw'
+  - {t: ▽, type: trans}
+  - '&login'
   - ESCAPE
   - RIGHT SHIFT
   - {t: ▽, type: trans}
