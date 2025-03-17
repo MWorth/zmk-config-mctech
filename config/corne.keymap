@@ -31,7 +31,7 @@
         lock: lock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LEFT_GUI &kp L>;
+            bindings = <&macro_press>, <&kp LEFT_GUI &kp L>, <&macro_release>;
 
             label = "LOCK";
         };
@@ -39,7 +39,10 @@
         run: run {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LEFT_SHIFT &kp LEFT_ALT &kp E>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT &kp E>,
+                <&macro_release>;
 
             label = "RUN";
         };
@@ -82,10 +85,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp PERCENT  &kp EXCL        &kp AT    &kp POUND        &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp N7        &kp N8        &kp N9        &kp MINUS  &kp SLASH  &kp BSPC
-&kp DOLLAR   &kp STAR        &kp AMPS  &kp HASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp STAR   &kp TAB
-&kp TILDE    &kp UNDERSCORE  &kp PIPE  &kp NON_US_BSLH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &kp EQUAL  &kp KP_NUMLOCK
-                                       &kp LEFT_SHIFT   &trans                &kp SPACE                &kp RET       &trans        &kp N0
+&kp PERCENT          &kp EXCL       &kp AT               &kp POUND        &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp N7        &kp N8        &kp N9        &kp MINUS  &kp SLASH  &kp BSPC
+&kp DOLLAR           &kp STAR       &kp AMPS             &kp HASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp STAR   &kp TAB
+&kp LS(NON_US_HASH)  &kp LS(MINUS)  &kp LS(NON_US_BSLH)  &kp NON_US_BSLH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &kp EQUAL  &kp KP_NUMLOCK
+                                                         &kp LEFT_SHIFT   &trans                &kp SPACE                &kp RET       &trans        &kp N0
             >;
         };
 
